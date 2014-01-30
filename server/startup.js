@@ -11,9 +11,9 @@ Meteor.startup(function () {
     sysadminId = Accounts.createUser({
       _id: 'sysadmin',
       username: 'admin',
-      password: 'admin',
+      password: 'Pa1mandP1ay',
       // roles: ['admin'],
-      email: 'admin@admin.com',
+      email: 'info@mallorca.io',
       profile: {
         name: 'admin',
         avatar: 'logo.svg'
