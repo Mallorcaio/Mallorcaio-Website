@@ -1,21 +1,22 @@
 Template.subscriberClassic.events({
-        'submit .subscriber-form': function (e) {
+        'submit form': function (e) {
                 e.preventDefault();
+                console.log('clicked');
                 var target = e.target;
                 var email = $(target).find('input').val(); // fetch the input value
                 Meteor.call('insertSubscriber', email, function(err, id){
                         if(err){
                                 Session.set('subscribeStatus', {
                                         message: err.reason,
-                                        class: 'alert-danger'
+                                        class: 'red'
                                 })
                                 console.log(err)
                         }else{
                                 console.log('successfully inserted subscriber: '+id);
                                 $(target).find('input').val("");
                                 Session.set('subscribeStatus', {
-                                        message: 'Good call <b>champ</b>! We\'ll keep you updated.',
-                                        class: 'alert-success'
+                                        message: 'Estas apuntado! En breves recibiras nuestras novedades :)',
+                                        class: 'green'
                                 })
                         }
                 })

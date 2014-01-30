@@ -11,3 +11,7 @@ Meteor.publish('cars', function () {
 Meteor.publish(null, function (){
   return Meteor.roles.find({})
 })
+
+Meteor.publish('subscribers', function () {
+  return Subscribers.find();
+});

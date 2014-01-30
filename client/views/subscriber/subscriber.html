@@ -11,17 +11,24 @@
                 </form>
         </div> -->
 
-        <div class="ui fluid form segment">
-          <div class="two fields">
+          <form class="ui fluid form segment">
+                <div class="ui icon message">
+                  <i class="inbox icon"></i>
+                  <div class="content">
+                    <div class="header">
+                     Quieres estar a la info del Proyecto?
+                    </div>
+                    <p>Get all the best inventions in your e-mail every day. Sign up now!</p>
+                  </div>
+                </div>
+              {{#if status}}
+              <div class="ui {{class}} message">
+                  <div class="content">{{message}}</div>
+              </div>
+              {{/if}}
             <div class="field">
-              <label>First Name</label>
-              <input placeholder="First Name" type="text">
+              <input placeholder="Anade tu mail" type="email" >
             </div>
-            <div class="field">
-              <label>Last Name</label>
-              <input placeholder="Last Name" type="text">
-            </div>
-          </div>
-          <div class="ui blue submit button">Submit</div>
-        </div>
+          <button type="submit" class="ui green submit button fluid"><i class="mail icon"></i>Apuntame</button>
+        </form>
 </template>
