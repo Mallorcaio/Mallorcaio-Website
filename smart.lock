@@ -2,24 +2,13 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "font-awesome": {
-        "version": "4.0.3"
-      },
-      "iron-router": {
-        "version": "0.6.2"
-      },
-      "ogno-admin": {
-        "version": "0.2.5"
-      },
-      "collection2": {
-        "version": "0.3.7"
-      },
-      "filepicker": {
-        "version": "0.4.0"
-      },
-      "stellar": {
-        "version": "0.1.0"
-      }
+      "font-awesome": {},
+      "iron-router": {},
+      "ogno-admin": {},
+      "collection2": {},
+      "filepicker": {},
+      "stellar": {},
+      "roles": {}
     },
     "packages": {
       "font-awesome": {
@@ -51,6 +40,11 @@
         "git": "https://github.com/noorderstorm/meteor-stellar.git",
         "tag": "v0.1.0",
         "commit": "1ca2f68e0cca5967a6f88545cea12055c9fc2465"
+      },
+      "roles": {
+        "git": "https://github.com/alanning/meteor-roles.git",
+        "tag": "v1.2.6",
+        "commit": "f2a9058281f8f2fe028767841d7445aadd6893cf"
       },
       "autoform": {
         "git": "https://github.com/aldeed/meteor-autoform.git",

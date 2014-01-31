@@ -1,0 +1,60 @@
+@import "variables.less";
+@import "responsive.less";
+@import "elements.less";
+
+
+body{
+	margin:0px;
+}
+
+.paddingtop{
+	padding-top:@paddingrow;
+}
+
+.margintop{
+	margin-top:@marginrow;
+}
+
+.layout.header{
+	padding:0px 10px;
+	position:fixed;
+	height: 60px;
+	float:left;
+	background-color: #FFF;
+	width:100%;
+	box-sizing:border-box;
+	z-index:99999;
+	.box-shadow(0 1px 1px rgba(0, 0, 0, 0.15));
+
+
+	h1,h2{
+			 position: relative;
+			  top: 50%;
+			  .transform(translateY(-50%));
+			  margin:0px;
+	}
+
+}
+
+.layout.child.breath > *{
+	margin-top: 40px;
+	display:block;
+}	
+
+
+.layout.container.centered{
+	text-align: center;
+}
+
+
+.layout.block.responsive.mobile{
+	max-width: @mobilebreak;
+}
+
+.layout.right{
+	float:right;
+}
+
+.layout.left{
+	float:left;
+}

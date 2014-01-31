@@ -1,0 +1,228 @@
+
+
+.responsive-invisibility() {
+    &,
+  tr&,
+  th&,
+  td& { display: none !important; }
+}
+
+.responsive-visibility() {
+    &,
+  tr&,
+  th&,
+  td& { display: block !important; }
+}
+
+iframe.responsive {
+            max-width: 100%;
+            padding:0 10px;
+            box-sizing:border-box;
+
+        }     
+
+@mobilebreak:480px;
+
+@tabletbreak:768px;
+@laptopbreak:992px;
+@screenbreak: 1200px;
+
+
+@mobilebreakmax:(@mobilebreak - 1);
+@tabletbreakmax:(@tabletbreak - 1);
+@laptopbreakmax:(@laptopbreak - 1);
+@screenbreakmax:(@screenbreak - 1);
+
+
+
+
+
+
+
+
+@-ms-viewport {
+  width: device-width;
+}
+
+body {
+@basefontsize: 14px; //en laptop
+
+   @media (max-width: @mobilebreakmax) {
+                font-size: @basefontsize * 0.85;
+        }
+
+         @media (min-width: @mobilebreak) and (max-width:@tabletbreakmax) {
+                font-size: @basefontsize * 0.9;
+        
+        }
+
+        @media (min-width: @tabletbreak) and (max-width: @laptopbreakmax) {
+                font-size: @basefontsize;
+        
+        }
+
+        @media (min-width: @laptopbreak) {
+                   font-size: @basefontsize;
+        
+        }
+
+
+
+
+
+}
+
+.masthead{
+
+  @basefontsize: 60px; //en laptop
+
+   @media (max-width: @mobilebreakmax) {
+                font-size: @basefontsize * 0.7;
+        }
+
+         @media (min-width: @mobilebreak) and (max-width:@tabletbreakmax) {
+                font-size: @basefontsize * 0.8;
+        
+        }
+
+        @media (min-width: @tabletbreak) and (max-width: @laptopbreakmax) {
+                font-size: @basefontsize*0.9;
+        
+        }
+
+        @media (min-width: @laptopbreak) {
+                   font-size: @basefontsize;
+        
+        }
+
+}
+
+h1{
+
+  margin:0px;
+
+  @basefontsize: 50px; //en laptop
+
+   @media (max-width: @mobilebreakmax) {
+                font-size: @basefontsize * 0.7;
+        }
+
+         @media (min-width: @mobilebreak) and (max-width:@tabletbreakmax) {
+                font-size: @basefontsize * 0.8;
+        
+        }
+
+        @media (min-width: @tabletbreak) and (max-width: @laptopbreakmax) {
+                font-size: @basefontsize*0.9;
+        
+        }
+
+        @media (min-width: @laptopbreak) {
+                   font-size: @basefontsize;
+        
+        }
+
+
+}
+
+h3{
+
+  margin:0px;
+
+  @basefontsize: 20px; //en laptop
+
+   @media (max-width: @mobilebreakmax) {
+                font-size: @basefontsize * 0.7;
+        }
+
+         @media (min-width: @mobilebreak) and (max-width:@tabletbreakmax) {
+                font-size: @basefontsize * 0.8;
+        
+        }
+
+        @media (min-width: @tabletbreak) and (max-width: @laptopbreakmax) {
+                font-size: @basefontsize*0.9;
+        
+        }
+
+        @media (min-width: @laptopbreak) {
+                   font-size: @basefontsize;
+        
+        }
+
+
+}
+
+
+
+// Visibility utilities
+.visible.mobile {
+  .responsive-invisibility();
+
+  @media (max-width: @mobilebreakmax) {
+    .responsive-visibility();
+  }
+}
+
+
+.visible.tablet {
+  .responsive-invisibility();
+
+  @media (min-width: @mobilebreak) and (max-width:@tabletbreakmax) {
+    .responsive-visibility();
+  }
+}
+.visible.laptop {
+  .responsive-invisibility();
+
+  @media (min-width: @tabletbreak) and (max-width: @laptopbreakmax) {
+    .responsive-visibility();
+  }
+}
+.visible.screen{
+  .responsive-invisibility();
+
+  @media (min-width: @laptopbreak) {
+    .responsive-visibility();
+  }
+}
+
+.hidden.mobile {
+  @media (max-width: @mobilebreakmax) {
+    .responsive-invisibility();
+  }
+}
+.hidden.tablet {
+  @media (min-width: @mobilebreak) and (max-width: @tabletbreakmax) {
+    .responsive-invisibility();
+  }
+}
+.hidden.laptop {
+  @media (min-width: @tabletbreak) and (max-width: @laptopbreakmax) {
+    .responsive-invisibility();
+  }
+}
+.hidden.screen{
+  @media (min-width: @screenbreak) {
+    .responsive-invisibility();
+  }
+}
+
+
+// Print utilities
+//
+// Media queries are placed on the inside to be mixin-friendly.
+
+.visible.print {
+  .responsive-invisibility();
+
+  @media print {
+    .responsive-visibility();
+  }
+}
+
+.hidden.print {
+  @media print {
+    .responsive-invisibility();
+  }
+}

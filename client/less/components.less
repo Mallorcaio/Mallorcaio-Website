@@ -1,0 +1,340 @@
+@import "variables.less";
+@import "elements.less";
+@import "responsive.less";
+
+
+.component.image.background{
+	width:100%;
+	position:relative;
+}
+.component.massive.image{
+  padding-top: 15%;  /* 450px/800px = 0.5625 */
+  padding-bottom: 15%;
+  margin:0px;
+  height: 200px;
+  background: url('/img/meteor.png') repeat center top;
+ /* background-size: cover;
+  -moz-background-size: cover; 
+  background-position: center;
+  */
+
+  text-align: center;
+
+}
+
+.parallax{
+	background-attachment: fixed;
+	position:relative;
+}
+
+.component.image > .masthead{
+	position:absolute;
+	font-family: 'Bree Serif', serif;
+	
+	max-width: @tabletbreak;
+	color:@colormasthead;
+ 	text-shadow: 3px 3px 4px rgba(0,0,0,0.5);
+ }
+
+
+i.icon.corporativo{
+	background-color:@colorcorporativo;
+}
+
+.component.corporativo.button {
+background-color: @colorcorporativo;
+color: #FFFFFF;
+}
+
+//centrar elementos blocks..
+.component.centered{
+	margin-right: auto;
+	margin-left: auto;
+
+}
+
+
+
+
+
+
+
+
+.component.centered.text{
+	text-align: center;
+}
+
+.breath{
+	line-height: 1.2rem;
+}
+.component.centered.size.small{
+	max-width:579px;
+}
+
+.component.centered.size.medium{
+	max-width:768px;
+}
+
+//all browser will see this declaration.
+
+.component.img.centered
+{
+	position: absolute;
+	max-width: 80%;
+	top: 10%;
+	left: 10%;
+	border-radius: 3px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.9);
+}
+
+
+.component.img.centered:empty
+{
+	top: 50%;
+	left: 50%;
+	.transform(-50%,-50%);
+}
+
+@media screen and (orientation: portrait) {
+  img.centered.responsive.small { 
+  	width:90%;
+  	max-width: 500px;  }
+}
+
+@media screen and (orientation: landscape) {
+  img.centered.responsive.small { 
+  	width:90%;
+  	max-width: 500px; 
+
+  }
+}
+
+.component.social > div{
+	width:50px;
+	height:50px;
+	vertical-align: top;
+	display: inline-block;
+	text-align: center;
+}
+
+
+
+.vertical.container>:first-child{
+	margin:0px;
+}
+
+
+.container.child.breath > *{
+	margin:100px auto;
+}
+.container.child.dropshadow > *{
+	.drop-shadow();
+}
+
+.container.child.margin > *{
+	margin-top:4.0rem;
+}
+
+.component.button{
+	background: @colorcorporativo;
+	color: white;
+	.borderradius(15px,15px,15px,15px);
+	border: none;
+	font-family: "Open Sans";
+	padding: 10px;
+	min-width: 80px;
+	max-width:140px;
+	margin: 30px auto;
+	.transition(5s);
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	cursor:pointer;
+
+}
+
+
+
+.component.button:hover{
+	background: white;
+	color:#000;
+	border: 2px solid #000;
+	
+	a{
+		color:#000;
+	}
+	
+}
+
+
+
+
+
+.component.list {
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+ 
+.component.list:after,
+.component.list > .item:before {
+    content: '';
+    display: table;
+}
+ 
+.component.list:after {
+    clear: both;
+}
+ 
+.component.list > .item {
+    
+    display: inline-block;
+    margin: 20px;
+   
+    vertical-align: top;
+}
+
+.component.list > .item > .circle {
+	width: 220px;
+    height: 220px;
+}
+
+.component.list > .item > .circle > .img1 { 
+     background: url('/img/sublime.png') no-repeat center top;
+      background-size:auto 150%;
+}
+
+.component.list > .item > .circle > .img2 { 
+     background: url('/img/frontend.jpg') no-repeat right top;
+      background-size:auto 100%;
+
+
+}
+
+.component.list > .item > .circle > .img3 { 
+     background: url('/img/emprendedores.jpg') no-repeat center top;
+     background-size:auto  100%;
+
+}
+
+.component.list > .item > .circle > .img4 { 
+     background: url('/img/aprendices.jpg');
+       background-size:auto 100%;
+
+}
+
+.component.list > .item > .circle > .image { 
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+    box-shadow: 
+        inset 0 0 0 5px rgba(255,255,255,0.6),
+        0 1px 2px rgba(0,0,0,0.1);
+   
+}
+
+.component.list {
+	
+	
+	@media (max-width: 1100px) {
+            padding:0px 0px;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 700px;
+        }
+}
+
+.component.list > .item  {
+	
+	
+	@media (max-width: 1100px) {
+              margin:4px 4px;
+              min-height:160px;
+              float:left;
+              width:100%;
+
+        }
+
+        @media (max-width: @mobilebreakmax) {
+              margin:4px 4px;
+              min-height:120px;
+              float:left;
+              width:100%;
+
+        }
+}
+
+
+.component.list > .item > .content > p{
+	
+	
+	
+
+        @media (min-width: 1101px) {
+        		height:70px;
+                
+         }
+
+       
+}
+
+.component.list > .item > .content {
+	
+	max-width: 220px;
+	@media (max-width: @laptopbreakmax) {
+                float:left;
+              
+                padding-left:15px;
+                text-align: justify;
+                padding-top:10px;
+        }
+
+        @media (max-width: 1100px) {
+                width: 600px;
+              	max-width: 60%;
+                padding-left:15px;
+                text-align: justify;
+                padding-top:10px;
+                float:left;
+        }
+
+        @media (max-width: @mobilebreakmax) {
+                
+               max-width: 60%;
+                padding-left:15px;
+                text-align: justify;
+                padding-top:10px;
+        }
+}
+
+.component.list > .item > .circle {
+
+
+	 @media (max-width: 1100px) {
+                 width: 150px;
+			    height: 150px;
+			    display: inline-block;
+			    margin: 0px;
+			    float:left;
+        }
+	
+	@media (max-width: @mobilebreakmax) {
+                 width: 100px;
+			    height: 100px;
+			    display: inline-block;
+			    margin: 0px;
+			    float:left;
+        }
+
+   
+}
+
+
+
+

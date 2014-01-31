@@ -1,0 +1,24 @@
+@import "elements.less";
+
+.vertical.align{
+  position: relative;
+  top: 50%;
+  .translate(0,-50%);
+}
+
+.horizontal.align{
+	position: relative;
+	left: 50%;
+	.translate(-50%,0);
+}
+
+.horizontal.vertical.align{
+	.translate(-50%,-50%);
+}
+
+ .centered.block{
+	margin-right: auto;
+	margin-left: auto;
+	display:block;
+}
+
