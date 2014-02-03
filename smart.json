@@ -2,10 +2,10 @@
   "packages": {
     "font-awesome": {},
     "iron-router": {},
+    "roles": {},
     "ogno-admin": {},
     "collection2": {},
     "filepicker": {},
-    "stellar": {},
-    "roles": {}
+    "stellar": {}
   }
 }
