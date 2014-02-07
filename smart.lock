@@ -81,8 +81,8 @@
       },
       "semantic-ui": {
         "git": "https://github.com/nooitaf/meteor-semantic-ui.git",
-        "tag": "v0.12.1",
-        "commit": "6d895bcec1953a1dd609541288fccc3971520d72"
+        "tag": "v0.12.4",
+        "commit": "a9dec18066d80e575e57189e005782436ad1d87f"
       },
       "simple-schema": {
         "git": "https://github.com/aldeed/meteor-simple-schema.git",

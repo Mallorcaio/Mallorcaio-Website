@@ -24,3 +24,8 @@ Template.layout.events({
   }
 });
 
+
+
+window.onload = function() {
+
+}

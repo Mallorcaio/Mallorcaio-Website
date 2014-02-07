@@ -1,4 +1,4 @@
-Template.subscriber.events({
+Template.subscriberClassic.events({
         'submit form': function (e) {
                 e.preventDefault();
                 console.log('clicked');
@@ -15,7 +15,8 @@ Template.subscriber.events({
                                 console.log('successfully inserted subscriber: '+id);
                                 $(target).find('input').val("");
                                 Session.set('subscribeStatus', {
-                                        message: 'Thanks for subscribing! :) ',
+
+                                        message: 'Estas apuntado! En breves recibiras nuestras novedades :)',
                                         class: 'green'
                                 })
                         }
@@ -23,7 +24,8 @@ Template.subscriber.events({
         }
 });
 
-Template.subscriber.helpers({
+
+Template.subscriberClassic.helpers({
         status: function () {
                 // ...
                 return Session.get('subscribeStatus');
