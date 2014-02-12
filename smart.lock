@@ -26,6 +26,9 @@
       },
       "font-awesome": {
         "version": "4.0.3"
+      },
+      "mailchimp": {
+        "version": "0.1.0"
       }
     },
     "packages": {
@@ -62,12 +65,17 @@
       "ms-seo": {
         "git": "https://github.com/DerMambo/ms-seo",
         "branch": "master",
-        "commit": "495cb66e744de2eeb67d9fd28f93a9cf3ad6f54b"
+        "commit": "ca6e145f6d265e333ccf4e0ab51e4ab63037bc3e"
       },
       "font-awesome": {
         "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
         "tag": "v4.0.3",
         "commit": "61e9361384347547ae144f8228faa4deffda23db"
+      },
+      "mailchimp": {
+        "git": "https://github.com/MiroHibler/meteor-mailchimp.git",
+        "tag": "v0.1.0",
+        "commit": "b18736af89cd546cf130b3970aa92047f2cd265e"
       },
       "autoform": {
         "git": "https://github.com/aldeed/meteor-autoform.git",

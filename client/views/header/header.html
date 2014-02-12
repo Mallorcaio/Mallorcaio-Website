@@ -4,23 +4,15 @@
     <div class="ui vertical inverted right sidebar menu">
       <a class="header item">
         <i class="close icon"></i>
-        Close
+        Cerrar
       </a>
       <a class="item" href="{{pathFor 'home'}}">
         <i class="home icon"></i>
-        Home
-      </a>
-      <a class="item" href="{{pathFor 'portfolio'}}">
-        <i class="lab icon"></i>
-        Portfolio
-      </a>
-      <a class="item" href="{{pathFor 'test'}}">
-        <i class="beer icon"></i>
-        Test
+        Inicio
       </a>
       <a class="item" href="{{pathFor 'contact'}}">
         <i class="mail icon"></i>
-        Contact
+        Contacto
       </a>
       {{#if isInRole 'admin'}}
       <a class="item" href="{{pathFor 'admin'}}"><i class="dashboard icon"></i>Admin</a>

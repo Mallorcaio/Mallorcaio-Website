@@ -3,7 +3,7 @@ Meteor.methods({
                 var reg = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
                 if(reg.test(email)){
                   if(Subscribers.findOne({email:email})){
-                    throw new Meteor.Error(422, 'Estas ya apuntado')
+                    throw new Meteor.Error(422, 'Ya estas apuntado')
                   } else {
                         var date = new Date().getTime(); // in epoch milliseconds
                         return Subscribers.insert({email: email, joined: date});

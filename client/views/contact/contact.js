@@ -12,9 +12,9 @@ Template.contact.events({
     if ($('#contact-form').parsley( 'isValid' )) {
 
         Meteor.call('sendEmail',
-                    'email@email.com',
+                    'kevinohagan@gmail.com',
                      email,
-                    'New Email from '+ name + ' from the Semantic Boilerplate!!',
+                    'New Email from '+ name + ' Mallorca.io!!',
                      message);
 
         var button = $('#contact-form button');
