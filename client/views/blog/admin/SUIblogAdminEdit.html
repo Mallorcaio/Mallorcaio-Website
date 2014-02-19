@@ -1,0 +1,27 @@
+<template name="SUIblogAdminEdit">
+
+  <div class="one column center aligned stackable ui grid">
+
+    <div class="column fourteen wide">
+      <div class="basic ui segment">
+        <div class="ui header floated left"><div class="ui horizontal ribbon green label">Editing</div>{{title}}</div>
+        <div class="sub floated right ui header"><div class="ui toggle checkbox"><input type="checkbox" id="preview-button"><label >Preview</label></div></div>
+      </div>
+      <form class="ui form post-form">
+        <div class="field">
+          <label>Title</label>
+          <input data-required="true" name="title" type="text" class="form-control" value="{{title}}"/>
+        </div>
+        <div class="field">
+          <label>Body</label>
+          <div class="segment ui left aligned" id="editor"></div>
+          <div class="segment ui left aligned" id="preview" hidden ></div>
+        </div>
+        <button type="submit" class="for-saving green ui labeled icon button"><i class="icon save"></i> Save</button>
+        <button type="submit" class="for-publishing blue ui labeled icon button"><i class="icon globe"></i> {{#if published}}Unpublish{{else}}Publish{{/if}}</button>
+        <button type="submit" class="for-deleting red ui labeled icon button"><i class="icon trash"></i> Delete</button>
+        <span class="status" hidden></span>
+      </form>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,42 @@
+<template name="singlepost">
+
+
+<div class="ui middle aligned stackable three column grid">
+  <div class="row">
+    <div class="column">
+      <div class="ui center aligned basic segment"><div class="ui header"><a href="{{pathFor 'blogIndex'}}"><i class="triangle left icon"></i><div class="content"> Back to the Blog</div></a></div></div>
+    </div>
+    <div class="column">
+    <a href="{{pathFor 'home'}}"><div class="ui center aligned basic segment image"><img class="medium image ui" src="http://mallorca.io/img/logo.png"></div></a>
+    </div>
+    <div class="column">
+      <div class="ui center aligned basic segment">
+        <a href="#" target="_blank" class="fb-share"><i class="circular large facebook icon link popup" data-content="Compartir en Facebook" data-variation="inverted"></i></a>
+        <a href="#" class="tw-share"><i class="circular large twitter icon link popup" data-content="Compartir en Twitter" data-variation="inverted"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="one column center aligned stackable grid ui">
+  <div class="section ui divider"></div>
+
+  <div class="fourteen wide column">
+    {{>blogPostBody}}
+  </div>
+</div>
+</template>
+
+
+<template name="blogPostBody">
+      <div class="ui vertical basic segment">
+      <article class="post">
+        <h1 class="ui black header post-title">{{title}}</h1>
+        <h3 class="sub header black tertiary">By {{authorName}} on {{blogFormatDate publishedAt}}</h3>
+        <div class="ui basic segment aligned left">
+          {{{html}}}
+        </div>
+      </article>
+    </div>
+</template>

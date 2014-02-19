@@ -1,3 +1,10 @@
+Template.contact.rendered = function () {
+  $('#contact-header')
+    .transition('slide down', '1s')
+    .transition('pulse', '1s');
+};
+
+
 Template.contact.events({
 
   'submit form' : function(event, template) {
@@ -27,8 +34,6 @@ Template.contact.events({
               document.getElementById('contact-form').reset();
             },1000);
     }
-
-
 
 }
 

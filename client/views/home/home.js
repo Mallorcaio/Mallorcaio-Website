@@ -3,6 +3,7 @@ Template.home.rendered = function() {
     setTimeout(function(){
     $('.modals').transition('pulse','1s');
   },300);
+  new WOW().init();
 };
 
 Template.home.created = function () {

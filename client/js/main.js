@@ -1,9 +1,3 @@
-Meteor.subscribe('fotos');
-Meteor.subscribe('cars');
-Meteor.subscribe('users');
-Meteor.subscribe('subscribers');
-
-
 
 
 window.onscroll = function() {
@@ -24,8 +18,3 @@ Template.layout.events({
   }
 });
 
-
-
-window.onload = function() {
-
-}

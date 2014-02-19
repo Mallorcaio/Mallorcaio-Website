@@ -1,7 +1,7 @@
 <template name="header">
 
-
-    <div class="ui vertical inverted right sidebar menu">
+<div class="ui vertical inverted right sidebar ">
+  <div class="ui vertical inverted menu">
       <a class="header item">
         <i class="close icon"></i>
         Cerrar
@@ -10,17 +10,18 @@
         <i class="home icon"></i>
         Inicio
       </a>
+      <a class="item" href="{{pathFor 'blogIndex'}}">
+        <i class="star icon"></i>
+        Blog
+      </a>
       <a class="item" href="{{pathFor 'contact'}}">
         <i class="mail icon"></i>
         Contacto
       </a>
-      {{#if isInRole 'admin'}}
-      <a class="item" href="{{pathFor 'admin'}}"><i class="dashboard icon"></i>Admin</a>
-      {{/if}}
 
-  <div class="ui inverted horizontal section divider">
-      <i class="green circular basic lightning icon"></i>
-  </div>
+      <div class="ui inverted horizontal section divider">
+          <i class="green circular basic lightning icon"></i>
+      </div>
 
 
       <div class="item">
@@ -29,7 +30,47 @@
         </div>
       </div>
 
+      {{#if isInRole 'admin'}}
+      <div class="ui inverted horizontal section divider">
+          <i class="green circular basic lightning icon"></i>
+      </div>
+      <a class="item" href="{{pathFor 'admin'}}"><i class="dashboard icon"></i>Admin</a>
+      <a href="{{pathFor 'blogAdmin'}}" class="item"> All Posts</a>
+      <a href="{{pathFor 'blogAdminNew'}}" class="item"> New Post</a>
+      <a href="{{pathFor 'adminUsers'}}" class="item">  All Users</a>
+        <div class="item">
+
+        </div>
+      {{/if}}
+  </div>
+
+  <div class="ui icon buttons">
+  <div class="ui top left pointing dropdown button">
+    <i class="user icon"></i>
+    <div class="menu">
+      <div class="item"><i class="edit icon"></i>Edit User</div>
+      <div class="item"><i class="delete icon"></i>Remove User</div>
+      <div class="item"><i class="hide icon"></i>Make Invisible</div>
     </div>
+  </div>
+  <div class="ui top left pointing dropdown button">
+    <i class="users icon"></i>
+    <div class="menu">
+      <div class="item"><i class="edit icon"></i>Edit Group</div>
+      <div class="item"><i class="delete icon"></i>Remove Group</div>
+      <div class="item"><i class="hide icon"></i>Hide from Group</div>
+    </div>
+  </div>
+  <div class="ui top right pointing dropdown button">
+    <i class="settings icon"></i>
+    <div class="menu">
+      <div class="item"><i class="edit icon"></i>Edit</div>
+      <div class="item"><i class="delete icon"></i>Remove</div>
+      <div class="item"><i class="hide icon"></i>Hide</div>
+    </div>
+  </div>
+</div>
+</div>
 
 
     <div class="ui black large icon button" id="btn">

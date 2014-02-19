@@ -10,6 +10,11 @@
       "git": "https://github.com/DerMambo/ms-seo"
     },
     "font-awesome": {},
-    "mailchimp": {}
+    "mailchimp": {},
+    "blog": {
+      "git": "http://github.com/kevohagan/meteor-blog"
+    },
+    "fast-render": {},
+    "wow": {}
   }
 }

@@ -28,7 +28,17 @@
         "version": "4.0.3"
       },
       "mailchimp": {
-        "version": "0.1.0"
+        "version": "0.2.0"
+      },
+      "blog": {
+        "git": "https://github.com/kevohagan/meteor-blog",
+        "branch": "master"
+      },
+      "fast-render": {
+        "version": "0.1.15"
+      },
+      "wow": {
+        "version": "0.1.3"
       }
     },
     "packages": {
@@ -65,7 +75,7 @@
       "ms-seo": {
         "git": "https://github.com/DerMambo/ms-seo",
         "branch": "master",
-        "commit": "ca6e145f6d265e333ccf4e0ab51e4ab63037bc3e"
+        "commit": "52287280685c0769c43127966f8ab265b72aebaa"
       },
       "font-awesome": {
         "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
@@ -74,13 +84,28 @@
       },
       "mailchimp": {
         "git": "https://github.com/MiroHibler/meteor-mailchimp.git",
-        "tag": "v0.1.0",
-        "commit": "b18736af89cd546cf130b3970aa92047f2cd265e"
+        "tag": "v0.2.0",
+        "commit": "a714b79dc4992ec2bbdbc9a152d13aab114bae3c"
+      },
+      "blog": {
+        "git": "https://github.com/kevohagan/meteor-blog",
+        "branch": "master",
+        "commit": "cd3e3508a3ceeae457f33d575db6adfc44b13f9c"
+      },
+      "fast-render": {
+        "git": "https://github.com/arunoda/meteor-fast-render.git",
+        "tag": "v0.1.15",
+        "commit": "baf79a3e5863acc3abfe2d0d62fb23b21fe880de"
+      },
+      "wow": {
+        "git": "https://github.com/noorderstorm/meteor-wow.git",
+        "tag": "v0.1.3",
+        "commit": "f5e0e3fbb123c1e19f236123f52d93eea4716001"
       },
       "autoform": {
         "git": "https://github.com/aldeed/meteor-autoform.git",
-        "tag": "v0.4.13",
-        "commit": "105803e4d42308893fbda30585dbdb4a38077e9a"
+        "tag": "v0.4.14",
+        "commit": "bd256edffecae7152a2d4644dbaba092ed5f3ad3"
       },
       "pagination-mini": {
         "git": "https://github.com/huyinghuan/meteor-pagination-mini.git",
@@ -94,13 +119,38 @@
       },
       "simple-schema": {
         "git": "https://github.com/aldeed/meteor-simple-schema.git",
-        "tag": "v0.2.36",
-        "commit": "d01745787de0711ffd095dcd212749d94a3fe0eb"
+        "tag": "v0.2.37",
+        "commit": "4531fc43dea7bab04e4647e9820fa52631408909"
+      },
+      "parsleyjs": {
+        "git": "https://github.com/nate-strauser/meteor-parsleyjs.git",
+        "tag": "v1.1.7",
+        "commit": "035a1e56a78e50369686b7e281aa71e3daf3729a"
+      },
+      "minimongoid": {
+        "git": "https://github.com/Exygy/minimongoid.git",
+        "tag": "v0.8.3",
+        "commit": "8a4849426f1775f9886f303067e50877696fae43"
       },
       "moment": {
         "git": "https://github.com/acreeger/meteor-moment.git",
         "tag": "v2.5.1",
         "commit": "8c9bc5d3fc96705057737cb9743d555417f6e551"
+      },
+      "marked": {
+        "git": "https://github.com/chuangbo/meteor-marked.git",
+        "tag": "v0.2.9",
+        "commit": "6485d6f03841501f81176e34ab375840473aa714"
+      },
+      "ace-embed": {
+        "git": "https://github.com/stuartfenton/meteor-ace-embed.git",
+        "tag": "v0.0.4",
+        "commit": "027b0e1b0d06111b51a713f04a8b8750fdcbd289"
+      },
+      "underscore-string-latest": {
+        "git": "https://github.com/TimHeckel/meteor-underscore-string.git",
+        "tag": "v2.3.3",
+        "commit": "4a5d70eee48fbd90a6e6fc78747250d704a0b3bb"
       }
     }
   }

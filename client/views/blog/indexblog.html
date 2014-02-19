@@ -1,0 +1,39 @@
+<template name="indexblog">
+
+ <div class="CoverImage FlexEmbed FlexEmbed--3by1" style="background-image:url(/img/header_blog.jpg);"></div>
+
+<div class="ui grid two stackable column ">
+    <div class="column five wide">
+      <div id="sidebar-blog" class="segment ui transition hidden">
+        <div class="header center aligned ui"><i class="icon blue browser"></i>Ultimas Entradas</div>
+          <div class="ui animated selection list">
+            {{#each posts}}
+             <a  href="{{pathFor 'blogShow'}}" class="item">
+              <div class="description "><i class="icon star floated left"></i>{{title}}</div>
+            </a>
+            {{/each}}
+          </div>
+      </div>
+    </div>
+    <div class="column ten wide">
+      {{> indexblogLoop}}
+      {{blogPager}}
+    </div>
+</div>
+</template>
+
+<template name="indexblogLoop">
+  {{#each posts}}
+    <article class="ui basic segment transition hidden post-index">
+      <h2 class="ui black tertiary header"><a  href="{{pathFor 'blogShow'}}">{{title}}</a></h2>
+      <h5 class="ui right floated sub black tertiary header post-meta">By {{authorName}} on {{blogFormatDate publishedAt}}</h5>
+      <div class="ui clearing divider"></div>
+      <div class="ui left aligned secondary segment">
+        <p>{{{excerpt}}}</p>
+      </div>
+    </article>
+    <div class="ui section divider"></div>
+  {{else}}
+    This blog is looking pretty empty...
+  {{/each}}
+</template>

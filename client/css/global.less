@@ -38,18 +38,6 @@ position: absolute;
 
 
 
-//Iframe
-
-iframe.responsive {
-            max-width: 100%;
-            padding:0 10px;
-            box-sizing:border-box;
-
-        }
-
-
-
-
 //Errors
 .parsley-error-list {
 color: #E81123;
@@ -63,4 +51,55 @@ list-style: none;
 
 .modals {
   cursor: pointer;
+}
+
+
+
+
+//Blog
+
+a {
+    color: inherit;
+    text-decoration: none;
+    color: @blue;
+    transition: 0.5s color;
+
+    &:hover {
+        color: gray;
+    }
+}
+
+.post-title {
+  font-size: 3rem!important;
+   @media @mobile {
+    font-size : 2rem!important;
+   }
+}
+
+.post {
+  h1,h2,h3,h4,h5,h6{
+  color : @blue;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.428571429;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #FFF;
+  background-color: #414344;
+  border: 1px solid #CCC;
+  border-radius: 0;
+  }
+}
+
+#editor {
+  min-height: 200px;
 }

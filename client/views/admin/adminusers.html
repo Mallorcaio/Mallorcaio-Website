@@ -1,0 +1,35 @@
+<template name="adminUsers">
+<div class="ui one column stackable page grid">
+ <div class="column">
+   <div class="segment ui">
+    <table class="ui sortable table segment">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Signed Up</th>
+            <th>Roles</th>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each users}}
+          <tr>
+            <td>{{username}}</td>
+            <td>{{createdAt}}</td>
+            <td>{{roles}}</td>
+          </tr>
+        {{/each}}
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>{{userCount}} Users</th>
+          </tr>
+        </tfoot>
+    </table>
+   </div>
+ </div>
+</div>
+
+
+
+</template>
+

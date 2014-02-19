@@ -1,0 +1,18 @@
+<template name='userCard'>
+
+<div class="ui piled segment">
+<h2>Tu perfil</h2>
+    <h3>{{name}}</h3>
+    <h4>{{subhead}}</h4>
+    <p>{{bio}}</p>
+    {{#if url}}
+    <p><a href='{{url}}' target="_blank"><i class="icon url"></i> {{url}}</a></p>
+    {{/if}}
+    {{#if googlePlusUrl}}
+    <p><a href='{{googlePlusUrl}}' target="_blank"><i class="icon google plus"></i> {{googlePlusUrl}}</a></p>
+    {{/if}}
+    {{#if twitterHandle}}
+    <p><a href='http://twitter.com/{{twitterHandle}}' target="_blank"><i class="icon twitter"></i> @{{twitterHandle}}</a></p>
+    {{/if}}
+</div>
+</template>

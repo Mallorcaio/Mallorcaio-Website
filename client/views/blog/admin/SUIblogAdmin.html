@@ -1,0 +1,52 @@
+<template name="SUIblogAdmin">
+
+  <div class="basic segment center aligned ui">
+    <div class="ui header">Blog Admin</div>
+    <div>
+          <div class="ui selectionj dropdown">
+          <input type="hidden" name="gender">
+          <div class="text">All Posts</div>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <div class="item" data-value="1">My posts</div>
+            <div class="item active" data-value="0">All Posts</div>
+          </div>
+          </div>
+    </div>
+  </div>
+
+  <div class="two column stackable ui grid">
+    <div class="column four wide">
+      {{> SUIblogAdminNav}}
+    </div>
+    <div class="column twelve wide">
+      {{> SUIblogAdminList}}
+    </div>
+  </div>
+</template>
+
+
+<template name="SUIblogAdminList">
+  <div class="animated big ui list">
+    {{#each posts}}
+    <div class="item">
+      {{#if published}}
+      <div class="right floated label ui">{{blogFormatDate createdAt}}</div>
+      {{else}}
+      <div class="right floated corner label ui ">Draft</div>
+      {{/if}}
+      <i class="right triangle icon"></i>
+      <div class="content">
+        <div class="header"><a href="{{pathFor 'blogAdminEdit'}}">{{title}}</a> by {{authorName}}</div>
+      </div>
+
+    </div>
+    {{else}}
+    <div class="item">
+      <div class="content">
+        <a href="{{pathFor 'blogAdminNew'}}"> Create the first blog post</a>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</template>
