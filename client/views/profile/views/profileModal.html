@@ -1,0 +1,58 @@
+<template name="profileModal">
+  <div id="profileModal" class="modal large ui">
+    <i class="close icon"></i>
+      <div class="ui form small segment">
+        <div class="ui two fields">
+          <div class="field">
+            <div class="ui green pointing below label">Nombre</div>
+            <input type="text" id="firstName" placeholder="First Name" value="{{firstName}}">
+          </div>
+          <div class="field">
+            <div class="ui green pointing below label">Apelido</div>
+            <input type="text" id="lastName" placeholder="Last Name" value="{{lastName}}">
+          </div>
+        </div>
+        <div class="ui two fields">
+          <div class="field">
+            <div class="ui green pointing below label">Email</div>
+            <input type="email" id="email" placeholder="Email" value="{{email}}">
+          </div>
+          <div class="field">
+            <div class="ui green pointing below label">Username</div>
+            <input type="text" id="username" placeholder="Username" value="{{username}}">
+          </div>
+        </div>
+
+        <div class="ui two fields">
+          <div class="field">
+            <div class="ui purple pointing below label">Organization</div>
+            <input type="text" id="organization" placeholder="Organization" value="{{organization}}">
+          </div>
+          <div class="field">
+             <div class="ui purple pointing below label">Location</div>
+            <input type="text" id="location" placeholder="Location" value="{{location}}">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui purple pointing below label">Bio</div>
+          <textarea name="bio" id="bio" rows="10" type="text" placeholder="Bio (optional)">{{bio}}</textarea>
+        </div>
+        <div class="ui three fields">
+          <div class="field">
+            <div class="ui pointing below label">URL</div>
+            <input type="text" id="url" placeholder="URL (optional)" value="{{url}}">
+          </div>
+          <div class="field">
+            <div class="ui pointing below label"><i class="icon google plus"></i>Google Plus</div>
+            <input type="text" id="googlePlusUrl" placeholder="Google Plus URL (optional)" value="{{googlePlusUrl}}">
+          </div>
+          <div class="field">
+            <div class="ui pointing below label"><i class="icon twitter"></i>Twitter</div>
+            <input type="text" id="twitterHandle" placeholder="Twitter Handle (optional)" value="{{twitterHandle}}">
+          </div>
+        </div>
+        <a class='ui blue submit button'><i class='icon save'></i>Guardar</a>
+      </div>
+  </div>
+
+  </template>

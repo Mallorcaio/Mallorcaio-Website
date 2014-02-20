@@ -30,6 +30,6 @@ Meteor.startup ->
 
 Meteor.startup ->
   AccountsEntry.config
-    # signupCode: 's3cr3t'
+    signupCode: 'meteor'
     defaultProfile:
         someDefault: 'default'

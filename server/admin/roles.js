@@ -1,31 +1,103 @@
- Accounts.validateNewUser(function (user) {
-    var loggedInUser = Meteor.user();
+ // Accounts.validateNewUser(function (user) {
+ //    var loggedInUser = Meteor.user();
 
-    if (Roles.userIsInRole(loggedInUser, ['admin','blog-team'])) {
-      return true;
-    }
+ //    if (Roles.userIsInRole(loggedInUser, ['admin','blog-team'])) {
+ //      return true;
+ //    }
 
-    throw new Meteor.Error(403, "Not authorized to create new users");
-  });
+ //    throw new Meteor.Error(403, "Not authorized to create new users");
+ //  });
 
 
- Meteor.methods({
-  /**
-   * update a user's permissions
-   *
-   * @param {Object} targetUserId Id of user to update
-   * @param {Array} roles User's new permissions
-   * @param {String} group Company to update permissions for
-   */
-  updateRoles: function (targetUserId, roles, group) {
-    var loggedInUser = Meteor.user()
+Meteor.methods({
+  deleteUser: function(userId) {
+    var user = Meteor.user();
+    if (!user || !Roles.userIsInRole(user, ['admin']))
+      throw new Meteor.Error(401, "You need to be an admin to delete a user.");
 
-    if (!loggedInUser ||
-        !Roles.userIsInRole(loggedInUser,
-                            'admin', group)) {
-      throw new Meteor.Error(403, "Access denied")
-    }
+    if (user._id == userId)
+      throw new Meteor.Error(422, 'You can\'t delete yourself.');
 
-    Roles.setUserRoles(targetUser, roles, group)
+    // remove the user
+    Meteor.users.remove(userId);
+  },
+
+  addUserRole: function(userId, role) {
+    var user = Meteor.user();
+    if (!user || !Roles.userIsInRole(user, ['admin']))
+      throw new Meteor.Error(401, "You need to be an admin to update a user.");
+
+    if (user._id == userId)
+      throw new Meteor.Error(422, 'You can\'t update yourself.');
+
+    // handle invalid role
+    if (Meteor.roles.find({name: role}).count() < 1 )
+      throw new Meteor.Error(422, 'Role ' + role + ' does not exist.');
+
+    // handle user already has role
+    if (Roles.userIsInRole(userId, role))
+      throw new Meteor.Error(422, 'Account already has the role ' + role);
+
+    // add the user to the role
+    Roles.addUsersToRoles(userId, role);
+  },
+
+  removeUserRole: function(userId, role) {
+    var user = Meteor.user();
+    if (!user || !Roles.userIsInRole(user, ['admin']))
+      throw new Meteor.Error(401, "You need to be an admin to update a user.");
+
+    if (user._id == userId)
+      throw new Meteor.Error(422, 'You can\'t update yourself.');
+
+    // handle invalid role
+    if (Meteor.roles.find({name: role}).count() < 1 )
+      throw new Meteor.Error(422, 'Role ' + role + ' does not exist.');
+
+    // handle user already has role
+    if (!Roles.userIsInRole(userId, role))
+      throw new Meteor.Error(422, 'Account does not have the role ' + role);
+
+    Roles.removeUsersFromRoles(userId, role);
+  },
+
+  addRole: function(role) {
+    var user = Meteor.user();
+    if (!user || !Roles.userIsInRole(user, ['admin']))
+      throw new Meteor.Error(401, "You need to be an admin to update a user.");
+
+    // handle existing role
+    if (Meteor.roles.find({name: role}).count() > 0 )
+      throw new Meteor.Error(422, 'Role ' + role + ' already exists.');
+
+    Roles.createRole(role);
+  },
+
+  removeRole: function(role) {
+    var user = Meteor.user();
+    if (!user || !Roles.userIsInRole(user, ['admin']))
+      throw new Meteor.Error(401, "You need to be an admin to update a user.");
+
+    // handle non-existing role
+    if (Meteor.roles.find({name: role}).count() < 1 )
+      throw new Meteor.Error(422, 'Role ' + role + ' does not exist.');
+
+    if (role === 'admin')
+      throw new Meteor.Error(422, 'Cannot delete role admin');
+
+    // remove the role from all users who currently have the role
+    // if successfull remove the role
+    Meteor.users.update(
+      {roles: role },
+      {$pull: {roles: role }},
+      {multi: true},
+      function(error) {
+        if (error) {
+          throw new Meteor.Error(422, error);
+        } else {
+          Roles.deleteRole(role);
+        }
+      }
+    );
   }
-})
+});

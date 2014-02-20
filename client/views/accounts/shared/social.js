@@ -13,6 +13,7 @@ Template.entrySocial.helpers({
 Template.entrySocial.events({
   'click .btn': function(event) {
     serviceName = $(event.target).attr('id').split('-')[1];
+    console.log('btn clicked' + serviceName);
     callback = function(err) {
       if (!err) {
         return Router.go(AccountsEntry.settings.dashboardRoute);

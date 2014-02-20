@@ -4,10 +4,10 @@ OgnoAdmin.config({
     prefix: 'admin',
 
     isAllowed : function () {
-        var user = Meteor.user();
-
-        if (user) {
-            return 'admin@admin.com' === user.emails[0].address;
-        }
+      var user = Meteor.user();
+      if (Roles.userIsInRole(user, ['admin'])) {
+        return true;
+      }
+      return false;
     }
 });

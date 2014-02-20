@@ -1,14 +1,14 @@
 Meteor.startup(function() {
   Accounts.ui.config({
-    passwordSignupFields: 'EMAIL_ONLY'
+    passwordSignupFields: 'USERNAME_AND_EMAIL'
   });
   return AccountsEntry.config({
-    logo: '/img/logo_io.jpg',
+    logo: '/img/logo.png',
     privacyUrl: '/privacy-policy',
     termsUrl: '/terms-of-use',
     homeRoute: '/',
     dashboardRoute: 'profile',
     profileRoute: 'profile',
-    showSignupCode: false
+    showSignupCode: true
   });
 });

@@ -6,10 +6,6 @@ Template.home.rendered = function() {
   new WOW().init();
 };
 
-Template.home.created = function () {
-  // new WOW().init();
-};
-
 Template.home.events({
   'click img': function (e, tmpl) {
     var that = $(e.target);

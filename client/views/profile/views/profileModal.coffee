@@ -7,6 +7,7 @@ Template.profileModal.rendered = ->
 
 Template.profileModal.helpers
   email:         -> Meteor.user().emails[0].address if Meteor.user().emails?
+  username:      -> Meteor.user().username
   firstName:     -> Meteor.user().profile.firstName
   lastName:      -> Meteor.user().profile.lastName
   organization:  -> Meteor.user().profile.organization
@@ -36,6 +37,11 @@ Template.profileModal.events
     Meteor.users.update Meteor.userId(),
       $set:
         'profile.lastName': $(event.target).val()
+
+  'change #username': (event) ->
+    Meteor.users.update Meteor.userId(),
+      $set:
+        'username': $(event.target).val()
 
   'change #organization': (event) ->
     Meteor.users.update Meteor.userId(),

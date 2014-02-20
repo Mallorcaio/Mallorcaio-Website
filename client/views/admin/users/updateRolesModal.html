@@ -1,0 +1,49 @@
+<template name="updateRolesModal">
+  <div id="updateRolesModal" class="modal large ui ">
+    <i class="close icon"></i>
+    {{>updateRolesModalInner}}
+  </div>
+</template>
+
+
+<template name="updateRolesModalInner">
+  {{#with userInScope}}
+    <div class="header center aligned ui"> {{username}} </div>
+    <div class="ui grid two columns stackable">
+      <div class="column ten wide">
+        {{>userCard}}
+      </div>
+      <div class="column six wide">
+        <div class="ui segment">
+          {{#if roles}}
+            <div class="list horizontal ui">
+              {{#each roles}}
+                <li class="item">
+                  <label data-user-id="{{../_id}}" class="ui label red left remove-role">{{this}}<i class="delete icon"></i></label>
+                </li>
+              {{/each}}
+            </div>
+          {{else}}
+            This account has no roles.
+          {{/if}}
+          {{#if unsetRoles}}
+            <div class="ui compact menu">
+              <div class="ui simple dropdown blue item">
+                Add Role <i class="dropdown icon"></i>
+                <div class="menu">
+                {{#each unsetRoles}}
+                  <div class="item"><a href="#" class="add-role" data-user-id="{{../_id}}">{{this}}</a></div>
+                {{/each}}
+                </div>
+              </div>
+            </div>
+            {{else}}
+            <em>All roles already set.</em>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+
+
+  {{/with}}
+</template>
