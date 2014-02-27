@@ -3,15 +3,16 @@
 <div class="ui page grid stackable segment">
   <div class="row">
     <div class="column">
-      <div class="right floated  ui header"><button id="profileModalBtn" class="ui button green">Edit</button></div>
       {{>profileModal}}
-      <h1 class="left floated blueIO ui header">
-      {{#if username}}
-        Welcome my boyy
-      {{else}}
-        Welcome {{username}}
-      {{/if}}
-      </h1>
+      <h2 class="left floated blueIO ui header">
+        <a id="profileModalBtn" href="#">
+        {{#if username}}
+          <img src="{{gravatar}}" alt="" class="ui avatar image"> {{username}}
+        {{else}}
+          {{email}}
+        {{/if}}
+        </a>
+      </h2>
       <div class="ui horizontal clearing divider"><i class="heart icon"></i></div>
     </div>
   </div>

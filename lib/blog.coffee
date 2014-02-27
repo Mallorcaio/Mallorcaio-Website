@@ -9,6 +9,6 @@ Meteor.startup ->
 
   if Meteor.isServer
     Blog.config
-      adminRole: "admin"
+      adminRole: "blogAdmin"
       title: "Mallorca.io - El desarrollo para todos"
       description: "Mallorca.io es una iniciativa sin ánimo de lucro para acercar el desarrollo web a todo el mundo."

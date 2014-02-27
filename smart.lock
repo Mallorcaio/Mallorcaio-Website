@@ -3,7 +3,7 @@
   "dependencies": {
     "basePackages": {
       "iron-router": {
-        "version": "0.6.2"
+        "version": "0.6.4"
       },
       "roles": {
         "version": "1.2.6"
@@ -30,22 +30,25 @@
       "mailchimp": {
         "version": "0.2.0"
       },
-      "blog": {
-        "git": "https://github.com/kevohagan/meteor-blog",
-        "branch": "master"
-      },
       "fast-render": {
-        "version": "0.1.15"
+        "version": "0.1.16"
       },
       "wow": {
         "version": "0.1.3"
+      },
+      "gravatar": {
+        "version": "0.0.4"
+      },
+      "blog": {
+        "git": "https://github.com/kevohagan/meteor-blog.git",
+        "branch": "master"
       }
     },
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.6.2",
-        "commit": "ce56e58b45624dce992490f3a1c10f10d3948bae"
+        "tag": "v0.6.4",
+        "commit": "927bbaed1b87894fb6fb70807f74ff3a5bd89f29"
       },
       "roles": {
         "git": "https://github.com/alanning/meteor-roles.git",
@@ -87,25 +90,30 @@
         "tag": "v0.2.0",
         "commit": "a714b79dc4992ec2bbdbc9a152d13aab114bae3c"
       },
-      "blog": {
-        "git": "https://github.com/kevohagan/meteor-blog",
-        "branch": "master",
-        "commit": "cd3e3508a3ceeae457f33d575db6adfc44b13f9c"
-      },
       "fast-render": {
         "git": "https://github.com/arunoda/meteor-fast-render.git",
-        "tag": "v0.1.15",
-        "commit": "baf79a3e5863acc3abfe2d0d62fb23b21fe880de"
+        "tag": "v0.1.16",
+        "commit": "e08aa22d76f25bb43e9d0f8bee3880c686f62b2b"
       },
       "wow": {
         "git": "https://github.com/noorderstorm/meteor-wow.git",
         "tag": "v0.1.3",
         "commit": "f5e0e3fbb123c1e19f236123f52d93eea4716001"
       },
+      "gravatar": {
+        "git": "https://github.com/tmeasday/meteor-gravatar.git",
+        "tag": "v0.0.4",
+        "commit": "d1052ff4401725c23fb199c0e0a36e29b926bc22"
+      },
+      "blog": {
+        "git": "https://github.com/kevohagan/meteor-blog.git",
+        "branch": "master",
+        "commit": "b3f3003a0e4dc389cec240733a24b2f0c58bd80e"
+      },
       "autoform": {
         "git": "https://github.com/aldeed/meteor-autoform.git",
-        "tag": "v0.4.15",
-        "commit": "ba904b7aaf9bd5ee473016cec3c5518d7f77cc1b"
+        "tag": "v0.4.18",
+        "commit": "991efc809b959e77d94796f47ca6c5b1e5c2c6e2"
       },
       "pagination-mini": {
         "git": "https://github.com/huyinghuan/meteor-pagination-mini.git",
@@ -114,18 +122,18 @@
       },
       "semantic-ui": {
         "git": "https://github.com/nooitaf/meteor-semantic-ui.git",
-        "tag": "v0.12.5",
-        "commit": "71d23b40d8ca6351dfd0740ba7393a0c88e57561"
+        "tag": "v0.13.0",
+        "commit": "e52080af47b590b6204d0824ece47e0f1a914f76"
       },
       "simple-schema": {
         "git": "https://github.com/aldeed/meteor-simple-schema.git",
         "tag": "v0.2.38",
         "commit": "2deec0041fc6cb2666df8cd6a51914e499e95683"
       },
-      "parsleyjs": {
-        "git": "https://github.com/nate-strauser/meteor-parsleyjs.git",
-        "tag": "v1.1.7",
-        "commit": "035a1e56a78e50369686b7e281aa71e3daf3729a"
+      "crypto-md5": {
+        "git": "https://github.com/oortcloud/meteor-crypto-md5.git",
+        "tag": "v3.1.2.2",
+        "commit": "75bbb3eeace302122d3554a6212a6fe92553fa18"
       },
       "minimongoid": {
         "git": "https://github.com/Exygy/minimongoid.git",
@@ -146,6 +154,11 @@
         "git": "https://github.com/stuartfenton/meteor-ace-embed.git",
         "tag": "v0.0.4",
         "commit": "027b0e1b0d06111b51a713f04a8b8750fdcbd289"
+      },
+      "crypto-base": {
+        "git": "https://github.com/oortcloud/meteor-crypto-base.git",
+        "tag": "v3.1.2.1",
+        "commit": "5df8d82a0595553415bbfae2930c6ecbeece5794"
       },
       "underscore-string-latest": {
         "git": "https://github.com/TimHeckel/meteor-underscore-string.git",

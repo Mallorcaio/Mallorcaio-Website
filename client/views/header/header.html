@@ -29,34 +29,47 @@
         </div>
       </div>
 
-          {{#if isInRole 'admin'}}
-      <div class="ui inverted horizontal section divider">
-          <i class="green circular basic lightning icon"></i>
-      </div>
-      <div class="item">
-       <div class="ui fluid green three buttons">
-        <div class="ui top left pointing dropdown button">
-          <i class="users icon"></i>
-          <div class="menu">
-            <div class="item"><a href="{{pathFor 'adminUsers'}}"><i class="users icon"></i>All Users</a></div>
-            <div class="item"><a href="{{pathFor 'adminUsers'}}"><i class="users icon"></i>Add Roles</a></div>
+      {{#if isInRole 'admin'}}
+        <div class="ui inverted horizontal section divider">
+            <i class="green circular basic lightning icon"></i>
+        </div>
+        <div class="item">
+         <div class="ui fluid green three buttons">
+          <div class="ui top left pointing dropdown button">
+            <i class="users icon"></i>
+            <div class="menu">
+              <div class="item"><a href="{{pathFor 'adminUsers'}}"><i class="users icon"></i>All Users</a></div>
+              <div class="item"><a href="{{pathFor 'adminUsers'}}"><i class="users icon"></i>Add Roles</a></div>
+            </div>
+          </div>
+          <div class="ui top left pointing dropdown button">
+            <i class="text file icon"></i>
+            <div class="menu">
+              <div class="item"><a href="{{pathFor 'blogAdminNew'}}"><i class="add icon"></i>New Post</a></div>
+              <div class="item"><a href="{{pathFor 'blogAdmin'}}"><i class="edit icon"></i>All Posts</a></div>
+            </div>
+          </div>
+          <div class="ui top right pointing dropdown button">
+            <i class="settings icon"></i>
+            <div class="menu">
+              <div class="item"><a href="{{pathFor 'adminUsers'}}"><i class="edit icon"></i>Edit Settings</a></div>
+            </div>
           </div>
         </div>
-        <div class="ui top left pointing dropdown button">
-          <i class="text file icon"></i>
-          <div class="menu">
-            <div class="item"><a href="{{pathFor 'blogAdminNew'}}"><i class="add icon"></i>New Post</a></div>
-            <div class="item"><a href="{{pathFor 'blogAdmin'}}"><i class="edit icon"></i>All Posts</a></div>
-          </div>
         </div>
-        <div class="ui top right pointing dropdown button">
-          <i class="settings icon"></i>
-          <div class="menu">
-            <div class="item"><a href="{{pathFor 'adminUsers'}}"><i class="edit icon"></i>Edit Settings</a></div>
-          </div>
+      {{/if}}
+      {{#if isInRole 'blogAdmin'}}
+        <div class="ui inverted horizontal section divider">
+            <i class="green circular basic lightning icon"></i>
         </div>
-      </div>
-      </div>
+        <a class="item" href="{{pathFor 'blogAdminNew'}}">
+          <i class="add icon"></i>
+          New Post
+        </a>
+        <a class="item" href="{{pathFor 'blogAdmin'}}">
+          <i class="edit icon"></i>
+          All Posts
+        </a>
       {{/if}}
 </div>
 

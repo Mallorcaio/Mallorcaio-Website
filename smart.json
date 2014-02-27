@@ -11,10 +11,11 @@
     },
     "font-awesome": {},
     "mailchimp": {},
-    "blog": {
-      "git": "http://github.com/kevohagan/meteor-blog"
-    },
     "fast-render": {},
-    "wow": {}
+    "wow": {},
+    "gravatar": {},
+    "blog": {
+         "git": "https://github.com/kevohagan/meteor-blog.git"
+    }
   }
 }

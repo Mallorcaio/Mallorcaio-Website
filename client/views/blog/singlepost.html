@@ -1,13 +1,34 @@
 <template name="singlepost">
 
+<!-- <div class="ui fluid three fixed borderless item menu" id="single-post-menu">
+  <div class="fitted item"><div class="ui header"><a href="{{pathFor 'blogIndex'}}"><i class="triangle left icon"></i>Volver atrás</a></div></div>
+  <div class="item"><a href="{{pathFor 'home'}}"><div class="ui center aligned basic segment image"><img class="medium image ui" src="http://mallorca.io/img/logo.png"></div></a></div>
+  <div class="item">
+  <div class="ui left aligned basic segment">
+    <span class="ui header computer only">Compartir este post en : </span>
+    <a href="#" target="_blank" class="fb-share"><i class="circular large facebook icon link popup" data-content="Compartir en Facebook" data-variation="inverted"></i></a>
+    <a href="#" class="tw-share"><i class="circular large twitter icon link popup" data-content="Compartir en Twitter" data-variation="inverted"></i></a>
+  </div>
+  </div>
+</div> -->
+
 
 <div class="ui middle aligned stackable three column grid">
   <div class="row">
     <div class="column">
-      <div class="ui center aligned basic segment"><div class="ui header"><a href="{{pathFor 'blogIndex'}}"><i class="triangle left icon"></i><div class="content"> Back to the Blog</div></a></div></div>
+        <div class="ui header center aligned">
+          <a href="{{pathFor 'blogIndex'}}">
+            <i class="triangle left icon"></i>
+              Volver atrás
+          </a>
+        </div>
     </div>
-    <div class="column">
-    <a href="{{pathFor 'home'}}"><div class="ui center aligned basic segment image"><img class="medium image ui" src="http://mallorca.io/img/logo.png"></div></a>
+    <div class="ui center aligned column">
+      <a href="{{pathFor 'home'}}">
+        <div class="ui center aligned basic segment image">
+          <img class="medium image ui" src="http://mallorca.io/img/logo.png">
+        </div>
+      </a>
     </div>
     <div class="column">
       <div class="ui center aligned basic segment">
@@ -20,12 +41,13 @@
 
 
 <div class="one column center aligned stackable grid ui">
-  <div class="section ui divider"></div>
-
-  <div class="fourteen wide column">
+  <div class="ui section divider"></div>
+  <div class="twelve wide column">
     {{>blogPostBody}}
   </div>
 </div>
+
+{{>disqusBlock}}
 </template>
 
 
@@ -33,7 +55,7 @@
       <div class="ui vertical basic segment">
       <article class="post">
         <h1 class="ui black header post-title">{{title}}</h1>
-        <h3 class="sub header black tertiary">By {{authorName}} on {{blogFormatDate publishedAt}}</h3>
+        <h3 class="sub header black tertiary">By <img src="{{authorGravatar}}" alt="{{authorName}}" class="ui avatar image">{{authorName}} on {{blogFormatDate publishedAt}}</h3>
         <div class="ui basic segment aligned left">
           {{{html}}}
         </div>

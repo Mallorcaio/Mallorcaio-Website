@@ -6,6 +6,7 @@
 body {
  font-family: 'Roboto Slab', serif;
  font-size: 20px;
+ font-weight: 300;
 
   @media @mobile {
     font-size: 13px;
@@ -18,7 +19,7 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  font-weight: 700;
 }
 
 .main-title{
@@ -83,6 +84,7 @@ a {
 
   p {
     font-size: 1.3rem;
+    color: #474646;
   }
 
   pre {
@@ -104,11 +106,20 @@ a {
   min-height: 200px;
 }
 
+#single-post-menu {
+  .header {
+    vertical-align: middle;
+  }
+  img{
+    bottom: 5px;
+  }
+}
 
 
 //Sidebar
 
 #sidebar {
+  z-index: 999999;
   .dropdown{
     a {
       color: #6B6B6B;
