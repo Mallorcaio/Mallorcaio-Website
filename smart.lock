@@ -9,7 +9,7 @@
         "version": "1.2.6"
       },
       "ogno-admin": {
-        "version": "0.2.5"
+        "version": "0.2.6"
       },
       "collection2": {
         "version": "0.3.8"
@@ -42,6 +42,14 @@
       "blog": {
         "git": "https://github.com/kevohagan/meteor-blog.git",
         "branch": "master"
+      },
+      "meteor-errors-sui": {
+        "git": "https://github.com/kevohagan/meteor-errors-sui.git",
+        "branch": "master"
+      },
+      "meteor-events": {
+        "git": "https://github.com/kevohagan/meteor-events.git",
+        "branch": "master"
       }
     },
     "packages": {
@@ -57,8 +65,8 @@
       },
       "ogno-admin": {
         "git": "https://github.com/matteodem/meteor-ogno-admin.git",
-        "tag": "v0.2.5",
-        "commit": "7d3010065a1813d92f2283bae9034ceb1679ef2b"
+        "tag": "v0.2.6",
+        "commit": "5c712355f6460c52a7ac428d7e01d5d3f6602b4d"
       },
       "collection2": {
         "git": "https://github.com/aldeed/meteor-collection2.git",
@@ -78,7 +86,7 @@
       "ms-seo": {
         "git": "https://github.com/DerMambo/ms-seo",
         "branch": "master",
-        "commit": "52287280685c0769c43127966f8ab265b72aebaa"
+        "commit": "6cd2cad761b03fc0ae0bde23f4d418d2313d84d9"
       },
       "font-awesome": {
         "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
@@ -110,10 +118,20 @@
         "branch": "master",
         "commit": "b3f3003a0e4dc389cec240733a24b2f0c58bd80e"
       },
+      "meteor-errors-sui": {
+        "git": "https://github.com/kevohagan/meteor-errors-sui.git",
+        "branch": "master",
+        "commit": "f8ec3197bfed0a93ff0eecf7d8502558c7303b3b"
+      },
+      "meteor-events": {
+        "git": "https://github.com/kevohagan/meteor-events.git",
+        "branch": "master",
+        "commit": "0d633f2811f26704f392edf496435902cd4f9aaf"
+      },
       "autoform": {
         "git": "https://github.com/aldeed/meteor-autoform.git",
-        "tag": "v0.4.18",
-        "commit": "991efc809b959e77d94796f47ca6c5b1e5c2c6e2"
+        "tag": "v0.4.20",
+        "commit": "d4d40a5356f9577a7d95d3526045035f3f1135af"
       },
       "pagination-mini": {
         "git": "https://github.com/huyinghuan/meteor-pagination-mini.git",
@@ -122,13 +140,13 @@
       },
       "semantic-ui": {
         "git": "https://github.com/nooitaf/meteor-semantic-ui.git",
-        "tag": "v0.13.0",
-        "commit": "e52080af47b590b6204d0824ece47e0f1a914f76"
+        "tag": "v0.14.0",
+        "commit": "36a98dcdc50216949d2f55c8bebc62ef5cbb29ee"
       },
       "simple-schema": {
         "git": "https://github.com/aldeed/meteor-simple-schema.git",
-        "tag": "v0.2.38",
-        "commit": "2deec0041fc6cb2666df8cd6a51914e499e95683"
+        "tag": "v0.2.40",
+        "commit": "d22892daa943e3567916effeaafd794ca6af5cd2"
       },
       "crypto-md5": {
         "git": "https://github.com/oortcloud/meteor-crypto-md5.git",

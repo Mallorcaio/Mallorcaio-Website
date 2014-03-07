@@ -19,13 +19,6 @@ Meteor.publish('subscribers', function () {
 });
 
 
-// Meteor.publish('users', function(){
-//   return Meteor.users.find({});
-// })
-
-
-
-
 
 // Only admin can see all users
 Meteor.publish('users', function () {

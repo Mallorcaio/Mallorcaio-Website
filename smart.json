@@ -16,6 +16,12 @@
     "gravatar": {},
     "blog": {
          "git": "https://github.com/kevohagan/meteor-blog.git"
+    },
+    "meteor-errors-sui": {
+      "git": "https://github.com/kevohagan/meteor-errors-sui.git"
+    },
+    "meteor-events": {
+      "git": "https://github.com/kevohagan/meteor-events.git"
     }
   }
 }
